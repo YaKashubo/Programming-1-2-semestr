@@ -1,11 +1,11 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<clocale>
 using namespace std;
 int main(int argc, char* argv[])
 {
 	setlocale(LC_ALL, "Russian");
 	int a = 0, b = 0;
-	cout << "Ââåäèòå ÷èñëà äëÿ ñëîæåíèÿ" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð° Ð´Ð»Ñ ÑÐ»Ð¾Ð¶ÐµÐ½Ð¸Ñ" << endl;
 	cin >> a >> b;
 	cout << a << " + " << b << " = " << a + b << endl;
 
