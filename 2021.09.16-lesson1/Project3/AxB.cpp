@@ -1,0 +1,13 @@
+#include<iostream>
+#include<clocale>
+using namespace std;
+int main(int argc, char* argv[])
+{
+	setlocale(LC_ALL, "Russian");
+	int a = 0, b = 0;
+	cout << "Введите числа для умножения" << endl;
+	cin >> a >> b;
+	cout << a << " x " << b << " = " << a * b << endl;
+
+	return 0;
+}
