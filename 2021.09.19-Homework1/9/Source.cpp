@@ -2,7 +2,10 @@
 using namespace std;
 int main(int arcg, char* argv)
 {
-	int zn = 0, x = 0, x2 = 0;
+	int zn = 0;
+	int x = 0;
+	int x2 = 0;
+
 	cout << "x = ";
 	cin >> x;
 

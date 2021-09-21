@@ -2,7 +2,13 @@
 using namespace std;
 int main(int argc, char* argv)
 {
-	int h1 = 0, m1 = 0, s1 = 0, h2 = 0, m2 = 0, s2 = 0, dif=0;
+	int h1 = 0;
+	int m1 = 0;
+	int s1 = 0;
+	int h2 = 0;
+	int m2 = 0;
+	int s2 = 0;
+	int dif = 0;
 
 	cout << "Time 1?" << endl << "Hours Minutes Seconds" << endl;
 	cin >> h1 >> m1 >> s1;

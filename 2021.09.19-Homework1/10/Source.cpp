@@ -2,8 +2,12 @@
 using namespace std;
 int main()
 {
-	int a, b;
-	cin >> a>>b;
-	cout << (b-a + 1) % (a-b);
-	
+	int a = 0;
+	int b = 0;
+	int max = 0;
+	cin >> a >> b;
+
+	max = a + (b - a) * ((a % b) / a);
+	cout << max << endl;
+
 }
