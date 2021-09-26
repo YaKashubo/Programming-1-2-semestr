@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<clocale>
 
 using namespace std;
@@ -19,31 +19,31 @@ int main(int argc, char* argv[])
 	switch (a100)
 	{
 	case 1:
-		cout << "Ñòî ";
+		cout << "Ð¡Ñ‚Ð¾ ";
 		break;
 	case 2:
-		cout << "Äâåñòè ";
+		cout << "Ð”Ð²ÐµÑÑ‚Ð¸ ";
 		break;
 	case 3:
-		cout << "Òðèñòî ";
+		cout << "Ð¢Ñ€Ð¸ÑÑ‚Ð¾ ";
 		break;
 	case 4:
-		cout << "×åòûðåñòî ";
+		cout << "Ð§ÐµÑ‚Ñ‹Ñ€ÐµÑÑ‚Ð¾ ";
 		break;
 	case 5:
-		cout << "Ïÿòüñîò ";
+		cout << "ÐŸÑÑ‚ÑŒÑÐ¾Ñ‚ ";
 		break;
 	case 6:
-		cout << "Øåñòüñîò ";
+		cout << "Ð¨ÐµÑÑ‚ÑŒÑÐ¾Ñ‚ ";
 		break;
 	case 7:
-		cout << "Ñåìüñîò ";
+		cout << "Ð¡ÐµÐ¼ÑŒÑÐ¾Ñ‚ ";
 		break;
 	case 8:
-		cout << "Âîñåìüñîò ";
+		cout << "Ð’Ð¾ÑÐµÐ¼ÑŒÑÐ¾Ñ‚ ";
 		break;
 	case 9:
-		cout << "Äåâÿòüñîò ";
+		cout << "Ð”ÐµÐ²ÑÑ‚ÑŒÑÐ¾Ñ‚ ";
 		break;
 	default:
 		break;
@@ -54,28 +54,28 @@ int main(int argc, char* argv[])
 		switch (a10)
 		{
 		case 2:
-			cout << "äâàäöàòü ";
+			cout << "Ð´Ð²Ð°Ð´Ñ†Ð°Ñ‚ÑŒ ";
 			break;
 		case 3:
-			cout << "òðèäöàòü ";
+			cout << "Ñ‚Ñ€Ð¸Ð´Ñ†Ð°Ñ‚ÑŒ ";
 			break;
 		case 4:
-			cout << "ñîðîê ";
+			cout << "ÑÐ¾Ñ€Ð¾Ðº ";
 			break;
 		case 5:
-			cout << "ïÿòüäåñÿò ";
+			cout << "Ð¿ÑÑ‚ÑŒÐ´ÐµÑÑÑ‚ ";
 			break;
 		case 6:
-			cout << "øåñòüäåñÿò ";
+			cout << "ÑˆÐµÑÑ‚ÑŒÐ´ÐµÑÑÑ‚ ";
 			break;
 		case 7:
-			cout << "ñåìüäåñÿò ";
+			cout << "ÑÐµÐ¼ÑŒÐ´ÐµÑÑÑ‚ ";
 			break;
 		case 8:
-			cout << "âîñåìüäåñÿò ";
+			cout << "Ð²Ð¾ÑÐµÐ¼ÑŒÐ´ÐµÑÑÑ‚ ";
 			break;
 		case 9:
-			cout << "äåâÿíîñòî ";
+			cout << "Ð´ÐµÐ²ÑÐ½Ð¾ÑÑ‚Ð¾ ";
 			break;
 		default:
 			break;
@@ -83,34 +83,34 @@ int main(int argc, char* argv[])
 		switch (n % 10)
 		{
 		case 1:
-			cout << "îäèí áàíàí" << endl;
+			cout << "Ð¾Ð´Ð¸Ð½ Ð±Ð°Ð½Ð°Ð½" << endl;
 			break;
 		case 2:
-			cout << "äâà áàíàíà" << endl;
+			cout << "Ð´Ð²Ð° Ð±Ð°Ð½Ð°Ð½Ð°" << endl;
 			break;
 		case 3:
-			cout << "òðè áàíàíà" << endl;
+			cout << "Ñ‚Ñ€Ð¸ Ð±Ð°Ð½Ð°Ð½Ð°" << endl;
 			break;
 		case 4:
-			cout << "÷åòûðå áàíàíà" << endl;
+			cout << "Ñ‡ÐµÑ‚Ñ‹Ñ€Ðµ Ð±Ð°Ð½Ð°Ð½Ð°" << endl;
 			break;
 		case 5:
-			cout << "ïÿòü áàíàíîâ" << endl;
+			cout << "Ð¿ÑÑ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 6:
-			cout << "øåñòü áàíàíîâ" << endl;
+			cout << "ÑˆÐµÑÑ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 7:
-			cout << "ñåìü áàíàíîâ" << endl;
+			cout << "ÑÐµÐ¼ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 8:
-			cout << "âîñåìü áàíàíîâ" << endl;
+			cout << "Ð²Ð¾ÑÐµÐ¼ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 9:
-			cout << "äåâÿòü áàíàíîâ" << endl;
+			cout << "Ð´ÐµÐ²ÑÑ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		default:
-			cout << "áàíàíîâ" << endl;
+			cout << "Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		}
 	}
@@ -119,34 +119,34 @@ int main(int argc, char* argv[])
 		switch (n % 10)
 		{
 		case 0:
-			cout << "äåñÿòü áàíàíîâ" << endl;
+			cout << "Ð´ÐµÑÑÑ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 1:
-			cout << "îäèííàäöàòü áàíàíîâ" << endl;
+			cout << "Ð¾Ð´Ð¸Ð½Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 2:
-			cout << "äâåíàäöàòü áàíàíîâ" << endl;
+			cout << "Ð´Ð²ÐµÐ½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 3:
-			cout << "òðèíàäöàòü áàíàíîâ" << endl;
+			cout << "Ñ‚Ñ€Ð¸Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 4:
-			cout << "÷åòûðíàäöàòü áàíàíîâ" << endl;
+			cout << "Ñ‡ÐµÑ‚Ñ‹Ñ€Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 5:
-			cout << "ïÿòíàäöàòü áàíàíîâ" << endl;
+			cout << "Ð¿ÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 6:
-			cout << "øåñòíàäöàòü áàíàíîâ" << endl;
+			cout << "ÑˆÐµÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 7:
-			cout << "ñåìíàäöàòü áàíàíîâ" << endl;
+			cout << "ÑÐµÐ¼Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 8:
-			cout << "âîñåìüíàäöàòü áàíàíîâ" << endl;
+			cout << "Ð²Ð¾ÑÐµÐ¼ÑŒÐ½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 9:
-			cout << "äåâÿòíàäöàòü áàíàíîâ" << endl;
+			cout << "Ð´ÐµÐ²ÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		}
 	}
@@ -155,31 +155,31 @@ int main(int argc, char* argv[])
 		switch (n % 10)
 		{
 		case 1:
-			cout << "îäèí áàíàí" << endl;
+			cout << "Ð¾Ð´Ð¸Ð½ Ð±Ð°Ð½Ð°Ð½" << endl;
 			break;
 		case 2:
-			cout << "äâà áàíàíà" << endl;
+			cout << "Ð´Ð²Ð° Ð±Ð°Ð½Ð°Ð½Ð°" << endl;
 			break;
 		case 3:
-			cout << "òðè áàíàíà" << endl;
+			cout << "Ñ‚Ñ€Ð¸ Ð±Ð°Ð½Ð°Ð½Ð°" << endl;
 			break;
 		case 4:
-			cout << "÷åòûðå áàíàíà" << endl;
+			cout << "Ñ‡ÐµÑ‚Ñ‹Ñ€Ðµ Ð±Ð°Ð½Ð°Ð½Ð°" << endl;
 			break;
 		case 5:
-			cout << "ïÿòü áàíàíîâ" << endl;
+			cout << "Ð¿ÑÑ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 6:
-			cout << "øåñòü áàíàíîâ" << endl;
+			cout << "ÑˆÐµÑÑ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 7:
-			cout << "ñåìü áàíàíîâ" << endl;
+			cout << "ÑÐµÐ¼ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 8:
-			cout << "âîñåìü áàíàíîâ" << endl;
+			cout << "Ð²Ð¾ÑÐµÐ¼ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		case 9:
-			cout << "äåâÿòü áàíàíîâ" << endl;
+			cout << "Ð´ÐµÐ²ÑÑ‚ÑŒ Ð±Ð°Ð½Ð°Ð½Ð¾Ð²" << endl;
 			break;
 		}
 	}
