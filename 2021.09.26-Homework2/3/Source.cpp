@@ -1,30 +1,31 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
 	int k = 0;
-	int m = 0;
 	int n = 0;
+	int m = 0;
+	int res = 0;
 
-	cout << "Max kotlets on frying pan at a time = ";
-	cin >> k;
+	cin >> k >> m >> n;
 
-	cout << "Time of cooking in minutes of 1 kotlet = ";
-	cin >> m;
-
-	cout << "General number of kotlets = ";
-	cin >> n;
-
-	if (n % k == 0)
+	if (n <= k)
 	{
-		cout << "You need " << (n / k) * 2 * m << " minutes" << endl;
+		res = 2 * m;
+	}
+	else if ((2 * n) % k == 0)
+	{
+		res = ((2 * m * n) / k);
 	}
 	else
 	{
-		cout << "You need " << (n / k + 1) * 2 * m << " minutes" << endl;
+		res = (((2 * n) / k + 1) * m);
 	}
+	cout << res;
 
 	return EXIT_SUCCESS;
 }
+
+

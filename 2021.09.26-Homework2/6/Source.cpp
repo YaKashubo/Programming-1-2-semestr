@@ -11,18 +11,19 @@ int main(int argc, char* argv[])
 	int dx = 0; // difference 
 	int dy = 0;
 
-	cout << "Write coordinates of queen" << endl << "x = ";
+	//cout << "Write coordinates of queen" << endl << "x = ";
 	cin >> xq;
-	cout << "y = ";
+	//cout << "y = ";
 	cin >> yq;
 
-	cout << "Write coordinates of figure" << endl << "x = ";
+	//cout << "Write coordinates of figure" << endl << "x = ";
 	cin >> xf;
-	cout << "y = ";
+	//cout << "y = ";
 	cin >> yf;
 
-	xf > xq ? dx = xf - xq : dx = xq - xf;
-	yf > yq ? dy = yf - yq : dy = yq - yf;
+	dx = xf > xq ? xf - xq : xq - xf;
+	dy = yf > yq ? yf - yq : yq - yf;
+
 
 	if (((xq == xf) || (yq == yf)) || (dx == dy))
 	{

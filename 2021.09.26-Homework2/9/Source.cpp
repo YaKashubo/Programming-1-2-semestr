@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -8,73 +8,39 @@ int main(int argc, char* argv[])
 	int y = 0;
 	int M = 0;
 	int N = 0;
+	int ansx = 0;
+	int ansy = 0;
 
-	cout << "Size of table?" << endl;
-	cin >> M >> N;
+	cin >> M >> N >> x >> y;
 
-	cout << "Coordinates of dot" << endl;
-	cin >> x >> y;
-
-	if (x == 1)
+	ansx = x + 1;
+	ansy = y;
+	if ((ansy > 0 && ansx > 0) && (ansx <= M && ansy <= N))
 	{
-		if (y == 1)
-		{
-			cout << "(" << x + 1 << "," << y << ")" << endl;
-			cout << "(" << x << "," << y + 1 << ")" << endl;
-		}
-		else if (y == N)
-		{
-			cout << "(" << x + 1 << "," << y << ")" << endl;
-			cout << "(" << x << "," << y - 1 << ")" << endl;
-		}
-		else
-		{
-			cout << "(" << x + 1 << "," << y << ")" << endl;
-			cout << "(" << x << "," << y - 1 << ")" << endl;
-			cout << "(" << x << "," << y + 1 << ")" << endl;
-		}
+		cout << ansx << " " << ansy << endl;
 	}
-	else if (x == M)
+
+	ansx = x - 1;
+	ansy = y;
+	if ((ansy > 0 && ansx > 0) && (ansx <= M && ansy <= N))
 	{
-		if (y == 1)
-		{
-			cout << "(" << x - 1 << "," << y << ")" << endl;
-			cout << "(" << x << "," << y + 1 << ")" << endl;
-		}
-		else if (y == N)
-		{
-			cout << "(" << x - 1 << "," << y << ")" << endl;
-			cout << "(" << x << "," << y - 1 << ")" << endl;
-		}
-		else
-		{
-			cout << "(" << x - 1 << "," << y << ")" << endl;
-			cout << "(" << x << "," << y - 1 << ")" << endl;
-			cout << "(" << x << "," << y + 1 << ")" << endl;
-		}
-	}
-	else
-	{
-		if (y == 1)
-		{
-			cout << "(" << x - 1 << "," << y << ")" << endl;
-			cout << "(" << x + 1 << "," << y << ")" << endl;
-			cout << "(" << x << "," << y + 1 << ")" << endl;
-		}
-		else if (y == N)
-		{
-			cout << "(" << x - 1 << "," << y << ")" << endl;
-			cout << "(" << x + 1 << "," << y << ")" << endl;
-			cout << "(" << x << "," << y - 1 << ")" << endl;
-		}
-		else
-		{
-			cout << "(" << x - 1 << "," << y << ")" << endl;
-			cout << "(" << x << "," << y - 1 << ")" << endl;
-			cout << "(" << x + 1 << "," << y << ")" << endl;
-			cout << "(" << x << "," << y + 1 << ")" << endl;
-		}
+		cout << ansx << " " << ansy << endl;
 
 	}
+
+	ansx = x;
+	ansy = y + 1;
+	if ((ansy > 0 && ansx > 0) && (ansx <= M && ansy <= N))
+	{
+		cout << ansx << " " << ansy << endl;
+	}
+
+	ansx = x;
+	ansy = y - 1;
+	if ((ansy > 0 && ansx > 0) && (ansx <= M && ansy <= N))
+	{
+		cout << ansx << " " << ansy << endl;
+	}
+
 	return EXIT_SUCCESS;
 }

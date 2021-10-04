@@ -2,11 +2,6 @@
 
 using namespace std;
 
-double f(int a, int b, int c)
-{
-	return (a * a + b * b - c * c) / (2.0 * a * b);
-}
-
 int main(int argc, char* argv[])
 {
 	double cosa = 0;
@@ -18,11 +13,11 @@ int main(int argc, char* argv[])
 
 	cin >> a >> b >> c;
 
-	cosa = f(a, b, c);
-	cosb = f(c, b, a);
-	cosw = f(a, c, b);
+	cosa = (a * a + b * b - c * c) / (2.0 * a * b);
+	cosb = (c * c + b * b - a * a) / (2.0 * c * b);
+	cosw = (a * a + c * c - b * b) / (2.0 * a * c);
 
-	if (abs(cosa) >= 1 || abs(cosb) >= 1 || abs(cosw) >= 1)
+	if (cosa >= 1 || cosb >= 1 || cosw >= 1 || cosa <= -1 || cosb <= -1 || cosw <= -1)
 	{
 		cout << "impossible" << endl;
 	}

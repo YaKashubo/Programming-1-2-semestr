@@ -8,14 +8,28 @@ int main(int argc, char* argv[])
 	int m = 0;
 	int k = 0;
 
-	cout << "Size of chocolate?" << endl;
-	cin >> n;
-	cout << "x" << endl;
-	cin >> m;
+	cin >> n >> m >> k;
 
-	cout << endl << "How much parts?" << endl;
-	cin >> k;
+	if (k > n * m)
+	{
+		cout << "NO";
+	}
+	else
+	{
+		if (n == 1)
+		{
+			cout << (k <= m ? "YES" : "NO");
+		}
+		else if (m == 1)
+		{
+			cout << (k <= n ? "YES" : "NO");
+		}
+		else
+		{
+			cout << (k % n == 0 || k % m == 0 ? "YES" : "NO");
+		}
+	}
 
-	cout << endl << (k % n == 0 || k % m == 0 ? "YES" : "NO") << endl;
+
 	return EXIT_SUCCESS;
 }

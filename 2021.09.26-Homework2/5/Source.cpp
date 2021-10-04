@@ -8,6 +8,6 @@ int main(int argc, char* argv[])
 
 	cin >> k;
 
-	cout << (k % 4 == 0 ? "YES" : "N0") << endl;
+	cout << (k % 4 == 0 || k == 1 ? "YES" : "NO");
 	return EXIT_SUCCESS;
 }
