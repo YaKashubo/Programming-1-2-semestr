@@ -8,7 +8,10 @@ int main(int argc, char* argv[])
 	cin >> n;
 
 	int* a = new int[n];
-	a[n] = { 0 };
+	for (int i = 0; i < n; i++)
+	{
+		a[i] = 0;
+	}
 
 	for (int i = 0; i < n; i++)
 	{
@@ -74,9 +77,9 @@ int main(int argc, char* argv[])
 	cout << "SECOND MAX : " << max2 << endl;
 
 	cout << "REVERSE : ";
-	for (int i = n-1; i >= 0; i--)
+	for (int i = n - 1; i >= 0; i--)
 	{
-		cout << a[i]<<" ";
+		cout << a[i] << " ";
 	}
 	cout << endl;
 
@@ -90,5 +93,6 @@ int main(int argc, char* argv[])
 	}
 	cout << endl;
 
+	delete[] a;
 	return EXIT_SUCCESS;
 }
