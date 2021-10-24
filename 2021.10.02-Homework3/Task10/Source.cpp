@@ -9,14 +9,11 @@ int main(int argc, char* argv[])
 
 	cin >> a >> b;
 
-	for (int i = a; i <= b; i++)
+	for (int i = 0; i * i <= b; i++)
 	{
-		for (int j = 0; j <= i; j++)
+		if (i * i >= a && i * i <= b)
 		{
-			if (j * j == i)
-			{
-				cout << i << endl;
-			}
+			cout << i * i << endl;
 		}
 	}
 	return EXIT_SUCCESS;
