@@ -4,14 +4,11 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+	
+	int a[100] = { 0 };
 	int n = 0;
 	cin >> n;
 
-	int* a = new int[n];
-	for (int i = 0; i < n; i++)
-	{
-		a[i] = 0;
-	}
 
 	for (int i = 0; i < n; i++)
 	{
@@ -93,6 +90,6 @@ int main(int argc, char* argv[])
 	}
 	cout << endl;
 
-	delete[] a;
+
 	return EXIT_SUCCESS;
 }
