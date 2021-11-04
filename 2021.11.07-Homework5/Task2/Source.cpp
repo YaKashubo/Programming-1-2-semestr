@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 
 		unsigned long long bit = 0; 
 
-		bit = 1 << (sizeof(long long) * 8 - 1 - i); // создаём число 1000 0000 0000 ..., чтобы получить конкретный бит
+		bit = ((long long)1) << (sizeof(long long) * 8 - 1 - i); // создаём число 1000 0000 0000 ..., чтобы получить конкретный бит
 
 		long long cbit = 0; // сам бит
 
