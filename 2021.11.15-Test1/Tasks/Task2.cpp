@@ -1,52 +1,29 @@
 #include<iostream>
 
-
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int min = 10001;
-	int max = -10001;
-	int k = 0;
-	int n = 1;
-	char s = 0;
-	int* a = new int[n];
-	
+	int a = 0;
+	int max = 0; 
+	int min = 0;
+	int i = 2;
 
-	do 
+	cin >> min >> max;
+	while (cin >> a)
 	{
-		if (k > n)
+		i++;
+		if (i % 2)
 		{
-			int* newarr = new int[n * 2]{ 0 };
-			for (int i = 0; i < n; i++)
+			if (a < min)
 			{
-				newarr[i] = a[i];
-			}
-			delete[] a;
-			a = newarr;
-			n *= 2;
-		}
-		if()
-	} while (s != "\n");
-
-	for (int i = 0; i < n; i++)
-	{
-		if (i % 2 == 0)
-		{
-			if (a[i] > max)
-			{
-				max = a[i];
+				min = a;
 			}
 		}
-		else
+		else if (a > max)
 		{
-			if (a[i] < min)
-			{
-				min = str[i];
-			}
+			max = a;
 		}
 	}
-	
-	cout << max + min << endl;
-	return EXIT_SUCCESS;
+	cout << max + min;
 }
