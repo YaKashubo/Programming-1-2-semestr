@@ -13,9 +13,9 @@ int main(int argc, char* argv[])
 	for (int i = 0; i < k; i++)
 	{
 		cin >> n >> m;
-		a[i] = 19*m + (n + 239) * (n + 366) / 2;
+		a[i] = 19 * m + (n + 239) * (n + 366) / 2;
 	}
-	
+
 	for (int i = 0; i < k; i++)
 	{
 		cout << a[i] << endl;

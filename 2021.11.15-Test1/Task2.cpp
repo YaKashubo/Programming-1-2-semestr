@@ -5,7 +5,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 	int a = 0;
-	int max = 0; 
+	int max = 0;
 	int min = 0;
 	int i = 2;
 
@@ -26,4 +26,6 @@ int main(int argc, char* argv[])
 		}
 	}
 	cout << max + min;
+
+	return EXIT_SUCCESS;
 }

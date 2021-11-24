@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 	cin >> a >> b;
 	a1 = a;
 	b1 = b;
-	while (a!=0 && b!=0)
+	while (a != 0 && b != 0)
 	{
 		if (a > b)
 		{

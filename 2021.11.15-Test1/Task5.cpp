@@ -8,9 +8,9 @@ int main(int argc, char* argv[])
 	int M = 0;
 	int k = 0;
 	cin >> N >> M;
-	int* n = new int[N];
-	int* m = new int[M];
-	int* a = new int[N + M];
+	int* n = new int[N] {0};
+	int* m = new int[M] {0};
+	int* a = new int[N + M]{0};
 
 	for (int i = 0; i < N; i++)
 	{
@@ -39,10 +39,10 @@ int main(int argc, char* argv[])
 	}
 	if (k != 0)
 	{
-		
-		for (int i = 0; i <k; i++)
+
+		for (int i = 0; i < k; i++)
 		{
-			for (int j = 0; j <k; j++)
+			for (int j = 0; j < k; j++)
 			{
 				if (a[i] < a[j])
 				{
