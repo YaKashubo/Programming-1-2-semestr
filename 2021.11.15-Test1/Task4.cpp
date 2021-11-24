@@ -4,13 +4,15 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int max = -1001;
-	int min = 1001;
+	int max = 0;
+	int min = 0;
 	int n = 0;
 	cin >> n;
 
 	int* a = new int[n] {0};
 
+	max = -1001;
+	min = 1001;
 	for (int i = 0; i < n; i++)
 	{
 		cin >> a[i];
