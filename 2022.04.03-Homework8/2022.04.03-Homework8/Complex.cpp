@@ -1,5 +1,10 @@
 #include "Complex.h"
 
+double Complex::sqrabs(double a, double b)
+{
+	return a * a + b * b;
+}
+
 Complex::Complex(double a, double b) :a(a), b(b) {}
 
 Complex::Complex(const Complex& complex) : a(complex.a), b(complex.b) {}
@@ -34,44 +39,6 @@ void Complex::set(double a, double b)
 {
 	this->a = a;
 	this->b = b;
-}
-
-void Complex::print()
-{
-	if (this->a == 0)
-	{
-		std::cout << this->b << "i" << std::endl;
-	}
-	else
-	{
-		if (this->b > 0)
-		{
-			if (this->b == 1)
-			{
-				std::cout << this->a << "+i" << std::endl;
-			}
-			else
-			{
-				std::cout << this->a << "+" << this->b << "i" << std::endl;
-			}
-		}
-		else if (this->b < 0)
-		{
-			if (this->b == -1)
-			{
-				std::cout << this->a << "-i" << std::endl;
-			}
-			else
-			{
-				std::cout << this->a << this->b << "i" << std::endl;
-			}
-		}
-		else
-		{
-			std::cout << this->a << std::endl;
-		}
-	}
-
 }
 
 Complex& Complex::operator=(const Complex& complex)
@@ -175,6 +142,27 @@ double Complex::arg()
 double Complex::mod()
 {
 	return sqrt(this->a * this->a + this->b * this->b);
+}
+
+Complex Complex::reverse()
+{
+	return Complex(this->a / sqrabs(this->a, this->b), -this->b / sqrabs(this->a, this->b));
+}
+
+void Complex::sqrtc(int n, std::ostream& stream)
+{
+	double newmod = 0;
+	newmod = pow(sqrt(sqrabs(this->a, this->b)), 1.0 / n);
+	double reangle = 0;
+	reangle= acos(this->a / sqrt(sqrabs(this->a, this->b)));
+	double imangle = 0;
+	imangle = asin(this->b / sqrt(sqrabs(this->a, this->b)));
+	Complex * roots = new Complex[n];
+	for (int i = 0; i < n; i++)
+	{
+		roots[i] = newmod * Complex((cos(reangle) + 2 * pi * (i + 1)) * (1.0 / n), (sin(imangle) + 2 * pi * (i + 1))* (1.0 / n));
+		stream << roots[i] <<" ";
+	}
 }
 
 Complex operator+(const Complex& complex1, const Complex& complex2)
