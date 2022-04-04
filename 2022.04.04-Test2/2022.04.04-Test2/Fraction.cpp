@@ -1,31 +1,5 @@
 #include "Fraction.h"
 
-ll Fraction::NOD(ll num1, ll num2)
-{
-	ll a = 0;
-	a = num1;
-	ll b = 0;
-	b = num;
-
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return ll(a + b);
-}
-
-ll Fraction::NOK(ll num1, ll num2)
-{
-	return (num1 * num2) / NOD(num1, num2);
-}
-
 Fraction::Fraction(ll num, ll denom)
 {
 	this->num = num;
@@ -143,6 +117,32 @@ Fraction Fraction::reverse()
 }
 
 
+ll NOD(ll num1, ll num2)
+{
+	ll a = 0;
+	a = abs(num1);
+	ll b = 0;
+	b = abs(num2);
+
+	while (a != 0 && b != 0)
+	{
+		if (a > b)
+		{
+			a %= b;
+		}
+		else
+		{
+			b %= a;
+		}
+	}
+	return ll(a + b);
+}
+
+ll NOK(ll num1, ll num2)
+{
+	return (num1 * num2) / NOD(num1, num2);
+}
+
 Fraction operator+(const Fraction& fr1, const Fraction& fr2)
 {
 	ll num = 0;
@@ -169,40 +169,14 @@ Fraction operator+(const Fraction& fr, double summ)
 {
 	ll num = 0;
 	num = fr.num + summ * fr.denom;
-	ll a = abs(num);
-	ll b =abs( fr.denom);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction(num / (a + b), fr.denom / (a + b));
+	return Fraction(num / NOD(num,fr.denom), fr.denom / NOD(num, fr.denom));
 }
 
 Fraction operator+(double summ, const Fraction& fr)
 {
 	ll num = 0;
 	num = fr.num + summ * fr.denom;
-	ll a =abs( num);
-	ll b =abs( fr.denom);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction(num / (a + b), fr.denom / (a + b));
+	return Fraction(num / NOD(num, fr.denom), fr.denom / NOD(num, fr.denom));
 }
 
 Fraction operator-(const Fraction& fr1, const Fraction& fr2)
@@ -211,114 +185,38 @@ Fraction operator-(const Fraction& fr1, const Fraction& fr2)
 	num = fr1.num * fr2.denom - fr2.num * fr1.denom;
 	ll denom = 0;
 	denom = fr1.denom * fr2.denom;
-	ll a = abs(num);
-	ll b = abs(denom);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction(num / (a + b), denom / (a + b));
+	return Fraction(num / NOD(num,denom), denom / NOD(num, denom));
 }
 
 Fraction operator-(const Fraction& fr, double summ)
 {
 	ll num = 0;
 	num = fr.num - summ * fr.denom;
-	ll a = abs(num);
-	ll b = abs(fr.denom);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction(num / (a + b), fr.denom / (a + b));
+	return Fraction(num / NOD(num, fr.denom), fr.denom / NOD(num, fr.denom));
 }
 
 Fraction operator-(double summ, const Fraction& fr)
 {
 	ll num = 0;
 	num = summ * fr.denom - fr.num;
-	ll a = abs(num);
-	ll b = abs(fr.denom);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction(num / (a + b), fr.denom / (a + b));
+	return Fraction(num / NOD(num, fr.denom), fr.denom / NOD(num, fr.denom));
 }
 
 Fraction operator*(const Fraction& fr1, const Fraction& fr2)
 {
-	ll a = abs(fr1.num * fr2.num);
-	ll b = abs(fr1.denom * fr2.denom);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction((fr1.num * fr2.num) / (a + b), (fr1.denom * fr2.denom) / (a + b));
+	ll num = fr1.num * fr2.num;
+	ll denom = fr1.denom * fr2.denom;
+	return Fraction(num / NOD(num,denom), denom / NOD(num,denom));
 }
 
 Fraction operator*(const Fraction& fr, double summ)
 {
-	ll a = abs(fr.num * summ);
-	ll b = abs(fr.denom);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction(fr.num * summ / (a + b), fr.denom / (a + b));
+	return Fraction(fr.num * summ / NOD(fr.num*summ,fr.denom), fr.denom / NOD(fr.num * summ, fr.denom));
 }
 
 Fraction operator*(double summ, const Fraction& fr)
 {
-	ll a = abs(fr.num * summ);
-	ll b = abs(fr.denom);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction(fr.num * summ / (a + b), fr.denom / (a + b));
+	return Fraction(fr.num * summ / NOD(fr.num * summ, fr.denom), fr.denom / NOD(fr.num * summ, fr.denom));
 }
 
 Fraction operator/(const Fraction& fr1, const Fraction& fr2)
@@ -327,20 +225,7 @@ Fraction operator/(const Fraction& fr1, const Fraction& fr2)
 	num = fr1.num * fr2.denom;
 	ll denom = 0;
 	denom = fr1.denom * fr2.num;
-	ll a = abs(num);
-	ll b = abs(denom);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction(num / (a + b), denom / (a + b));
+	return Fraction(num / NOD(num,denom), denom / NOD(num,denom));
 }
 
 Fraction operator/(const Fraction& fr, double summ)
@@ -348,40 +233,15 @@ Fraction operator/(const Fraction& fr, double summ)
 
 	ll denom = 0;
 	denom = fr.denom * summ;
-	ll a = abs(fr.num);
-	ll b = abs(denom);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction(fr.num / (a + b), denom / (a + b));
+
+	return Fraction(fr.num / NOD(fr.num,denom), denom /NOD(fr.num,denom));
 }
 
 Fraction operator/(double summ, const Fraction& fr)
 {
 	ll num = 0;
 	num = summ * fr.denom;
-	ll a = abs(num);
-	ll b = abs(fr.num);
-	while (a != 0 && b != 0)
-	{
-		if (a > b)
-		{
-			a %= b;
-		}
-		else
-		{
-			b %= a;
-		}
-	}
-	return Fraction(num / (a + b), fr.num / (a + b));
+	return Fraction(num / NOD(num,fr.num), fr.num / NOD(num, fr.num));
 }
 
 Fraction powf(ll n, const Fraction& fr)
@@ -397,7 +257,14 @@ std::ostream& operator<<(std::ostream& stream, const Fraction& fr)
 	}
 	else
 	{
-		stream << fr.num << "/" << fr.denom;
+		if (fr.denom < 0)
+		{
+			stream << "-" << fr.num << "/" << -fr.denom;
+		}
+		else
+		{
+			stream << fr.num << "/" << fr.denom;
+		}
 	}
 	return stream;
 }

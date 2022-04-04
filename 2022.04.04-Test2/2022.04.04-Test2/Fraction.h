@@ -8,10 +8,10 @@ class Fraction
 private:
 	ll num;
 	ll denom;
-public:
-	ll NOD(ll num1, ll num2);
-	ll NOK(ll num1, ll num2);
 
+	friend ll NOD(ll num1, ll num2);
+	friend ll NOK(ll num1, ll num2);
+public:
 	Fraction(ll num = 0, ll denom = 0);
 	Fraction(const Fraction& frac);
 	~Fraction();
