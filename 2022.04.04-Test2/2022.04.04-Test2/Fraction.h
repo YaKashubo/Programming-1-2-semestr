@@ -44,7 +44,7 @@ public:
 	friend Fraction operator/(const Fraction& fr1, const Fraction& fr2);
 	friend Fraction operator/(const Fraction& fr, double summ);
 	friend Fraction operator/(double summ, const Fraction& fr);
-
+	friend Fraction powf(ll n, const Fraction& fr);
 	Fraction operator-();
 	Fraction abs();
 	Fraction reverse();

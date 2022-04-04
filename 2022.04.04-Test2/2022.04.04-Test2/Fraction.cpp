@@ -149,8 +149,8 @@ Fraction operator+(const Fraction& fr1, const Fraction& fr2)
 	num = fr1.num * fr2.denom + fr2.num * fr1.denom;
 	ll denom = 0;
 	denom = fr1.denom * fr2.denom;
-	ll a = num;
-	ll b = denom;
+	ll a = abs(num);
+	ll b = abs(denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -169,8 +169,8 @@ Fraction operator+(const Fraction& fr, double summ)
 {
 	ll num = 0;
 	num = fr.num + summ * fr.denom;
-	ll a = num;
-	ll b = fr.denom;
+	ll a = abs(num);
+	ll b =abs( fr.denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -189,8 +189,8 @@ Fraction operator+(double summ, const Fraction& fr)
 {
 	ll num = 0;
 	num = fr.num + summ * fr.denom;
-	ll a = num;
-	ll b = fr.denom;
+	ll a =abs( num);
+	ll b =abs( fr.denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -211,8 +211,8 @@ Fraction operator-(const Fraction& fr1, const Fraction& fr2)
 	num = fr1.num * fr2.denom - fr2.num * fr1.denom;
 	ll denom = 0;
 	denom = fr1.denom * fr2.denom;
-	ll a = num;
-	ll b = denom;
+	ll a = abs(num);
+	ll b = abs(denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -231,8 +231,8 @@ Fraction operator-(const Fraction& fr, double summ)
 {
 	ll num = 0;
 	num = fr.num - summ * fr.denom;
-	ll a = num;
-	ll b = fr.denom;
+	ll a = abs(num);
+	ll b = abs(fr.denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -251,8 +251,8 @@ Fraction operator-(double summ, const Fraction& fr)
 {
 	ll num = 0;
 	num = summ * fr.denom - fr.num;
-	ll a = num;
-	ll b = fr.denom;
+	ll a = abs(num);
+	ll b = abs(fr.denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -269,8 +269,8 @@ Fraction operator-(double summ, const Fraction& fr)
 
 Fraction operator*(const Fraction& fr1, const Fraction& fr2)
 {
-	ll a = fr1.num * fr2.num;
-	ll b = fr1.denom * fr2.denom;
+	ll a = abs(fr1.num * fr2.num);
+	ll b = abs(fr1.denom * fr2.denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -287,8 +287,8 @@ Fraction operator*(const Fraction& fr1, const Fraction& fr2)
 
 Fraction operator*(const Fraction& fr, double summ)
 {
-	ll a = fr.num * summ;
-	ll b = fr.denom;
+	ll a = abs(fr.num * summ);
+	ll b = abs(fr.denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -305,8 +305,8 @@ Fraction operator*(const Fraction& fr, double summ)
 
 Fraction operator*(double summ, const Fraction& fr)
 {
-	ll a = fr.num * summ;
-	ll b = fr.denom;
+	ll a = abs(fr.num * summ);
+	ll b = abs(fr.denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -327,8 +327,8 @@ Fraction operator/(const Fraction& fr1, const Fraction& fr2)
 	num = fr1.num * fr2.denom;
 	ll denom = 0;
 	denom = fr1.denom * fr2.num;
-	ll a = num;
-	ll b = denom;
+	ll a = abs(num);
+	ll b = abs(denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -348,8 +348,8 @@ Fraction operator/(const Fraction& fr, double summ)
 
 	ll denom = 0;
 	denom = fr.denom * summ;
-	ll a = fr.num;
-	ll b = denom;
+	ll a = abs(fr.num);
+	ll b = abs(denom);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -368,8 +368,8 @@ Fraction operator/(double summ, const Fraction& fr)
 {
 	ll num = 0;
 	num = summ * fr.denom;
-	ll a = num;
-	ll b = fr.num;
+	ll a = abs(num);
+	ll b = abs(fr.num);
 	while (a != 0 && b != 0)
 	{
 		if (a > b)
@@ -382,6 +382,11 @@ Fraction operator/(double summ, const Fraction& fr)
 		}
 	}
 	return Fraction(num / (a + b), fr.num / (a + b));
+}
+
+Fraction powf(ll n, const Fraction& fr)
+{
+	return Fraction(pow(fr.num,n),pow(fr.denom,n));
 }
 
 std::ostream& operator<<(std::ostream& stream, const Fraction& fr)
